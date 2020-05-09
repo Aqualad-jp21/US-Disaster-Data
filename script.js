@@ -1,7 +1,5 @@
 const tabs = M.Tabs.init(document.querySelector('.tabs'));
 
-
-//var dataArray;
 var data;
 let dataArray = [];
 
@@ -24,33 +22,33 @@ function test(data){
 function buildChartData(){
   const data = [{
         name: 'Flood',
-        y: dataArray.Flood, //396,
+        y: dataArray.Flood, 
         sliced: true,
         selected: true
     }, {
         name: 'Earthquake',
-        y: dataArray.Earthquake//13
+        y: dataArray.Earthquake
     }, {
         name: 'Severe Storm(s)',
-        y: dataArray["Severe Storm(s)"] //144
+        y: dataArray["Severe Storm(s)"] 
     }, {
         name: 'Hurricane',
-        y: dataArray.Hurricane//208
+        y: dataArray.Hurricane
     }, {
         name: 'Fire',
-        y: dataArray.Fire//208
+        y: dataArray.Fire
     }, {
         name: 'Tornado',
-        y: dataArray.Tornado //56
+        y: dataArray.Tornado 
     }, {
         name: 'Typhoon',
-        y: dataArray.Typhoon //71
+        y: dataArray.Typhoon 
     }, {
         name: 'Drought',
-        y: dataArray.Drought //30
+        y: dataArray.Drought 
     }, {
         name: 'Other',
-        y: dataArray.Other //4
+        y: dataArray.Other 
     }];
 
   return data;
@@ -58,7 +56,6 @@ function buildChartData(){
 }
 
 function drawChart(data){
-  // Radialize the colors
 Highcharts.setOptions({
     colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
         return {
@@ -69,7 +66,7 @@ Highcharts.setOptions({
             },
             stops: [
                 [0, color],
-                [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
+                [1, Highcharts.color(color).brighten(-0.3).get('rgb')] 
             ]
         };
     })
@@ -113,44 +110,6 @@ Highcharts.chart('container', {
      
 }
 
-/*function drawChart(data){
-Highcharts.chart('container', {
-   chart: {
-       plotBackgroundColor: null,
-       plotBorderWidth: null,
-       plotShadow: false,
-       type: 'pie'
-   },
-   title: {
-       text: 'Disaster Declerations'
-   },
-   tooltip: {
-       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-   },
-   accessibility: {
-       point: {
-           valueSuffix: '%'
-       }
-   },
-   plotOptions: {
-       pie: {
-           allowPointSelect: true,
-           cursor: 'pointer',
-           dataLabels: {
-               enabled: true,
-               format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-           }
-       }
-   },
-   series: [{
-       name: 'Disasters',
-       colorByPoint: true,
-       data: data
-   }]
-});
-}
-*/
-
 async function getData(url){
   try{
     let response = await fetch(url);//1. Send http request and get response
@@ -172,7 +131,6 @@ async function getData(url){
 getData("https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries");
 
 
-
 //---------------------------------------------------
 var data2;
 let dataArray2 = [];
@@ -181,15 +139,15 @@ let dataArray2 = [];
 function createArray2(data){
   let results = {};
 
-  for (let i = 0; i < data.DisasterDeclarationsSummaries.length; ++i) { // loop over array
+  for (let i = 0; i < data.DisasterDeclarationsSummaries.length; ++i) { 
 
     if (data.DisasterDeclarationsSummaries[i].incidentType === "Flood"){
-        if (!results[data.DisasterDeclarationsSummaries[i].state]){  // if key does not exist
+        if (!results[data.DisasterDeclarationsSummaries[i].state]){  
 
-        results[data.DisasterDeclarationsSummaries[i].state]=0;  // then make one
+        results[data.DisasterDeclarationsSummaries[i].state]=0;  
 
         }
-        ++results[data.DisasterDeclarationsSummaries[i].state];     // increment the frequency for that key
+        ++results[data.DisasterDeclarationsSummaries[i].state]; 
     }
     
     
@@ -200,20 +158,14 @@ function createArray2(data){
 
 async function getData2(url){
   try{
-    let response = await fetch(url);//1. Send http request and get response
-    let result = await response.json();//2. Get data from response
+    let response = await fetch(url);
+    let result = await response.json();
 
     dataArray2 = createArray2(result);
-    //dataArray = test(result);
-
-    //data2 = 
-    //data = buildChartData();
     drawChart2(dataArray2)
-    //drawChart(data);
-    
-    // console.log({dataArray});
+  
   }catch(e){
-      console.log(e);//catch and log any errors
+      console.log(e);
   }
 }
 
@@ -229,9 +181,6 @@ Highcharts.chart('container1', {
     title: {
         text: 'Flood'
     },
-    /*subtitle: {
-        text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
-    },*/
     accessibility: {
         announceNewData: {
             enabled: true
@@ -271,45 +220,37 @@ Highcharts.chart('container1', {
             data: [
                 {
                     name: "Texas",
-                    y: dataArray2.TX//51,
-                    //drilldown: "Chrome"
+                    y: dataArray2.TX
                 },
                 {
                     name: "Iowa",
-                    y: dataArray2.IA //73,
-                    //drilldown: "Firefox"
+                    y: dataArray2.IA 
                 },
                 {
                     name: "Nebraska",
-                    y: dataArray2.NE //41,
-                    //drilldown: "Internet Explorer"
+                    y: dataArray2.NE 
                 },
                 {
                     name: "California",
-                    y:  dataArray2.CA //54,
-                    //drilldown: "Safari"
+                    y:  dataArray2.CA 
                 },
                 {
                     name: "Idaho",
-                    y: dataArray2.ID //18,
-                    //drilldown: "Edge"
+                    y: dataArray2.ID 
                 },
                 {
                     name: "Minnesota",
-                    y: dataArray2.MN//22,
-                    //drilldown: "Opera"
+                    y: dataArray2.MN
                 },
                 {
                     name: "Washington",
-                    y: dataArray2.WA //17,
-                    //drilldown: null
+                    y: dataArray2.WA 
                 }
             ]
         }
     ]
     
 });
-
 
 }
 
@@ -325,15 +266,15 @@ let hurricaneArray=[];
 function createArray3(data){
   let results = {};
 
-  for (let i = 0; i < data.DisasterDeclarationsSummaries.length; ++i) { // loop over array
+  for (let i = 0; i < data.DisasterDeclarationsSummaries.length; ++i) { 
 
     if (data.DisasterDeclarationsSummaries[i].incidentType === "Tornado"){
-        if (!results[data.DisasterDeclarationsSummaries[i].state]){  // if key does not exist
+        if (!results[data.DisasterDeclarationsSummaries[i].state]){ 
 
-        results[data.DisasterDeclarationsSummaries[i].state]=0;  // then make one
+        results[data.DisasterDeclarationsSummaries[i].state]=0;  
 
         }
-      ++results[data.DisasterDeclarationsSummaries[i].state];     // increment the frequency for that key
+      ++results[data.DisasterDeclarationsSummaries[i].state];     
     }
     
     
@@ -345,15 +286,15 @@ function createArray3(data){
 function createArray4(data){
   let results = {};
 
-  for (let i = 0; i < data.DisasterDeclarationsSummaries.length; ++i) { // loop over array
+  for (let i = 0; i < data.DisasterDeclarationsSummaries.length; ++i) { 
 
     if (data.DisasterDeclarationsSummaries[i].incidentType === "Hurricane"){
-        if (!results[data.DisasterDeclarationsSummaries[i].state]){  // if key does not exist
+        if (!results[data.DisasterDeclarationsSummaries[i].state]){  
 
-        results[data.DisasterDeclarationsSummaries[i].state]=0;  // then make one
+        results[data.DisasterDeclarationsSummaries[i].state]=0;  
 
         }
-        ++results[data.DisasterDeclarationsSummaries[i].state];     // increment the frequency for that key
+        ++results[data.DisasterDeclarationsSummaries[i].state];     
     }
     
     
@@ -364,22 +305,16 @@ function createArray4(data){
 
 async function getData3(url){
   try{
-    let response = await fetch(url);//1. Send http request and get response
-    let result = await response.json();//2. Get data from response
+    let response = await fetch(url);
+    let result = await response.json();
 
-    //dataArray3 = createArray3(result);
     tornadoArray = createArray3(result);
     hurricaneArray = createArray4(result);
 
-    //data2 = 
-    //data = buildChartData();
     drawChart3(tornadoArray, hurricaneArray);
-    //drawChart2(dataArray2)
-    //drawChart(data);
     
-    // console.log({dataArray});
   }catch(e){
-      console.log(e);//catch and log any errors
+      console.log(e);
   }
 }
 
