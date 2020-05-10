@@ -81,7 +81,7 @@ Highcharts.chart('container', {
         type: 'pie'
     },
     title: {
-        text: 'Disaster Declerations'
+        text: 'Disaster Declerations Summary'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -179,7 +179,7 @@ Highcharts.chart('container1', {
         type: 'column'
     },
     title: {
-        text: 'Flood'
+        text: 'Frequency of Floods in Seven States'
     },
     accessibility: {
         announceNewData: {
@@ -191,7 +191,7 @@ Highcharts.chart('container1', {
     },
     yAxis: {
         title: {
-            text: 'Number of Floods'
+            text: 'Frequency of Floods'
         }
 
     },
@@ -219,8 +219,8 @@ Highcharts.chart('container1', {
             colorByPoint: true,
             data: [
                 {
-                    name: "Texas",
-                    y: dataArray2.TX
+                    name: "North Dakota",
+                    y: dataArray2.ND
                 },
                 {
                     name: "Iowa",
@@ -235,16 +235,16 @@ Highcharts.chart('container1', {
                     y:  dataArray2.CA 
                 },
                 {
-                    name: "Idaho",
-                    y: dataArray2.ID 
+                    name: "West Virginia",
+                    y: dataArray2.WV 
                 },
                 {
                     name: "Minnesota",
                     y: dataArray2.MN
                 },
                 {
-                    name: "Washington",
-                    y: dataArray2.WA 
+                    name: "Oregon",
+                    y: dataArray2.OR 
                 }
             ]
         }
@@ -335,7 +335,7 @@ function drawChart3(tornado, hurricane){
     },
 
     title: {
-        text: 'Tornado and Hurricane'
+        text: 'Tornados and Hurricanes'
     },
 
     xAxis: {
