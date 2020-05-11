@@ -1,4 +1,59 @@
+body{
+    font-family:  perpetua;
+    font-size: 25px;
+    background-color: #cfd8dc ;
+  }
 
+      #results, #results2{
+        background-image:url("https://www.nationalgeographic.com/content/dam/magazine/rights-exempt/2020/02/departments/explore/chasing-storms-supercell-farm-elevator.adapt.1900.1.jpg");
+        color: white;
+        text-align: left;
+  }
+  
+
+      #results3{
+        background-image: url("https://backgrounds4k.net/wp-content/uploads/2016/04/Tornado-background-3840x2160.jpg");
+         
+      }
+
+      
+      #results2{
+        color: white;
+        text-align: center;
+      }
+
+      
+
+      img{
+        width: 250px;
+        height: 250px;
+        border: 10px groove ;
+      }
+
+      .fig{
+        text-align: center;
+      }
+      .fig1{
+        display: inline;
+        text-align: left;
+      }
+      .fig2{
+        display: inline;
+        text-align: center;
+        
+      }
+
+      .fig3{
+        display: inline;
+        text-align: right;
+
+      }
+
+      .fig5{
+        text-align: right;
+      }
+    
+    
 
 .highcharts-figure, .highcharts-data-table table {
     min-width: 310px; 
