@@ -25,10 +25,24 @@
 
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
 
-    <style>
+<style>
+  body{
+    font-family:  perpetua;
+    font-size: 25px;
+  }
+
+  #results{
+      background-image: url ("https://dema.az.gov/sites/default/files/news-articles/AZ%20Disasters.jpg"); 
+      color: black; 
+    }
+
+      #results3{
+        background-image: url("https://backgrounds4k.net/wp-content/uploads/2016/04/Tornado-background-3840x2160.jpg");
+      }
+
       #results2{
         
-        background-image: url("https://cdn.hipwallpaper.com/i/8/46/Kv7anO.jpg");
+        background-image: url("https://www.freeimageslive.com/galleries/nature/sky/pics/rain_clouds.JPG");
         color: white;
       }
 
@@ -59,6 +73,10 @@
         top: 570px;
       }
 
+      .fig5{
+        text-align: right;
+      }
+
       @media screen and (max-width: 600px) {
         img{
           width: 200px;
@@ -79,8 +97,9 @@
         left: 250px;
         top: 826px;
       }
-}
-
+    }
+    
+    
     </style>
 
   </head>
@@ -89,13 +108,14 @@
 
     <nav class="nav-extended blue ">
       <div class="nav-wrapper blue ">
-        <a href="#" class="brand-logo center">Natural Disasters</a>     
+        <a href="#" class="brand-logo center">Natural Disasters</a> 
+          
       </div>
       <div class="nav-content">
         <ul class="tabs tabs-transparent">
           <li class="tab"><a class="active" href="#results">Disaster Summary</a></li>
           <li class="tab"><a  href="#results2">Floods</a></li>
-          <li class="tab"><a  href="#results3">Hurricanes and Tornados</a></li>
+          <li class="tab"><a  href="#results3">Tornados and Hurricanes </a></li>
         </ul>
       </div>
     </nav>
@@ -157,11 +177,15 @@
              Above is a comparison of the Number of Hurricanes and Tornadoes in four states.
           </p>
           <p>
-             These four states were selceted because they were the only states recorded that had experienced both hurricanes and toronados.
+             These four states were selceted because they were the only states recorded that had <br> experienced both hurricanes and toronados.
           </p>
           <p>
-             Eventhough across all states there are more tornados than hurricanes, in these four higlighted states in the chart above, hurricanes have a higher frequency than tornados, with the exception of Georgia.   
+             Eventhough across all states there are more tornados than hurricanes, in these four <br> higlighted states in the chart above, hurricanes have a higher frequency than tornados, <br> with the exception of Georgia.   
           </p>
+        </figure>
+
+        <figure class="fig5">
+          <img src="https://specials-images.forbesimg.com/imageserve/847391148/960x0.jpg?fit=scale" alt="Strong winds of a Hurricane" >
         </figure>
 
     </section>
