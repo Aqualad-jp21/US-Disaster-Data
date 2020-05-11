@@ -34,18 +34,21 @@
 
   #results{
     background-image:url("https://www.nationalgeographic.com/content/dam/magazine/rights-exempt/2020/02/departments/explore/chasing-storms-supercell-farm-elevator.adapt.1900.1.jpg");
+    color: white;
+    text-align: left;
   }
   
 
       #results3{
         background-image: url("https://backgrounds4k.net/wp-content/uploads/2016/04/Tornado-background-3840x2160.jpg");
-        color: white; 
+         
       }
 
+      
       #results2{
-        
         background-image: url("https://i.dlpng.com/static/png/1839148--rainy-sky-png-1920_1080_preview.webp");
         color: white;
+        text-align: center;
       }
 
       
@@ -53,24 +56,26 @@
       img{
         width: 250px;
         height: 250px;
+        border: 10px groove ;
       }
 
+      .fig{
+        text-align: center;
+      }
+      .fig1{
+        display: inline;
+        text-align: left;
+      }
       .fig2{
-        position: absolute;
-        left: 350px;
-        top: 610px;
+        display: inline;
+        text-align: center;
+        
       }
 
       .fig3{
-        position: absolute;
-        right: 325px;
-        top: 660px;
-      }
+        display: inline;
+        text-align: right;
 
-      .fig4{
-        position: absolute;
-        right: 10px;
-        top: 610px;
       }
 
       .fig5{
@@ -93,6 +98,7 @@
 
       .fig3{
         position: static;
+        text-align: left;
       }
 
       .fig4{
@@ -130,16 +136,21 @@
         <div id="container"></div>
 
         <p class="highcharts-description">
-          The chart above shows a summary of natural disasters recorded across the US from 1953 on the <em>Federal Emergency Management Agency (FEMA)</em> website. 
+          The chart above shows a summary of natural disasters <br> recorded across the US from 1953 on the <em>Federal Emergency <br> Management Agency (FEMA)</em> website. 
 
         </p>
 
         <p>
-          The pie chart reveals that <b> Floods </b> make up the majority of disasters recorded druing the time period followed by <b> Tornados</b> then <b> Hurricanes</b>. 
+          The pie chart reveals that <b> Floods </b> make up the majority of <br> disasters recorded druing the time period followed by <br> <b> Tornados</b> then <b> Hurricanes</b>. 
         </p>
                   
     </figure>
 
+    
+      <figure class="fig">
+          <img src="https://userscontent2.emaze.com/images/22b0cd08-545f-4151-b873-2a22509cc7bc/7d59714d-34d7-4c1a-a1f4-cc179e1f936e.png" alt="Natural Disasters"  >
+          
+        </figure>
    
     </section>
     <section id="results2" class="col s12">
@@ -153,20 +164,17 @@
 
         <br> 
         
-        <figure>
-          <img src="https://storage.googleapis.com/afs-prod/media/5ca8463fecd6408b970e16ec677076b4/800.jpeg" alt="A Flooded residential area"  >
+        <figure class="fig1">
+          <img src="https://s.abcnews.com/images/US/flooding-indiana1-usa-today-ml-180226_16x9_992.jpg" alt="Image of a flooded residential area" >
           
         </figure>
 
-        <figure class="fig2">
-          <img src="https://s.abcnews.com/images/US/flooding-indiana1-usa-today-ml-180226_16x9_992.jpg" alt="Image of a flooded area" >
-        </figure>
         
-        <figure class="fig3">
+        <figure class="fig2">
           <img src="https://s.abcnews.com/images/US/flooding-canal-cars-_hpMain_20190708-101307_16x9_992.jpg" alt="Image of a flooded area with vehicles" >
         </figure>
 
-        <figure class="fig4">
+        <figure class="fig3">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR33tRz-WsKQEEpZ3YAAL7W8pUMJGlm7MBRl0VDjz1P10_mhxRm&usqp=CAU" alt="Evacuation of residents from a flooded area" >
         </figure>
 
