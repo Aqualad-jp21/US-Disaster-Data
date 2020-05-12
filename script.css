@@ -64,7 +64,7 @@ body{
 .highcharts-data-table table {
 	font-family: Verdana, sans-serif;
 	border-collapse: collapse;
-	border: 1px solid #EBEBEB;
+	border: 3px dashed rgb(3, 0, 0);
 	margin: 10px auto;
 	text-align: center;
 	width: 100%;
@@ -73,7 +73,7 @@ body{
 .highcharts-data-table caption {
     padding: 1em 0;
     font-size: 1.2em;
-    color: #555;
+    color: rgba(85, 85, 85, 0);
 }
 .highcharts-data-table th {
 	font-weight: 600;
@@ -83,10 +83,10 @@ body{
     padding: 0.5em;
 }
 .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
+    background: #7774749d;
 }
 .highcharts-data-table tr:hover {
-    background: #f1f7ff;
+    background: #a5c2e9;
 }
 
 
