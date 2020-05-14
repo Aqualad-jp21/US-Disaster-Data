@@ -6,9 +6,14 @@ body{
 
       #results, #results2{
         background-image:url("https://www.nationalgeographic.com/content/dam/magazine/rights-exempt/2020/02/departments/explore/chasing-storms-supercell-farm-elevator.adapt.1900.1.jpg");
+        background-size: stretch;
+        position: absolute;
+        width:100%;
         color: white;
         text-align: left;
   }
+
+ 
   
     .tab{
       font-size: 30px;
@@ -16,7 +21,9 @@ body{
 
       #results3{
         background-image: url("https://backgrounds4k.net/wp-content/uploads/2016/04/Tornado-background-3840x2160.jpg");
-         
+        background-size: stretch;
+        position: absolute;
+        width:100%; 
       }
 
       
@@ -28,6 +35,7 @@ body{
 
       .fig{
         text-align: center;
+        
       }
       .fig1{
         display: inline;
